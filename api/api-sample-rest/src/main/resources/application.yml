@@ -1,0 +1,10 @@
+aws.s3:
+    access-key-id: AKIAJ2BH54LS736TA6SA
+    secret-key-id: QNCQB6dJXtSpvnmhl7ejccxPQz4QJ84DwrIbs+Ss
+    default-bucket-name: dev-headimg
+    key-prefix: sample
+    upload-timeout: 60000
+cloud.aws.credentials.accessKey: AKIAJ2BH54LS736TA6SA
+cloud.aws.credentials.secretKey: QNCQB6dJXtSpvnmhl7ejccxPQz4QJ84DwrIbs+Ss
+cloud.aws.region.auto: true
+cloud.aws.region.static: us-east-1

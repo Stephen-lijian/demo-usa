@@ -1,0 +1,64 @@
+rootProject.name='demo'
+
+include ':api'
+include ':api:api-file-rest'
+include ':api:api-account-rest'
+include ':api:api-passport-rest'
+include ':api:api-user-rest'
+include ':api:api-appreciation-generator-rest' 
+include ':api:api-appreciation-rest'
+include ':api:api-map-rest'
+include ':api:api-sample-rest'
+include ':api:api-base'
+
+include ':ms'
+include ':ms:ms-account-rest'
+include ':ms:ms-user-rest'
+include ':ms:ms-appreciation-generator-rest'
+include ':ms:ms-appreciation-rest'
+include ':ms:ms-count-rest'
+include ':ms:ms-notify-rest'
+include ':ms:ms-config-rest'
+
+include ':ms:ms-user-messaging'
+include ':ms:ms-appreciation-messaging'
+include ':ms:ms-search-messaging'
+
+include ':ms:ms-user-timer'
+include ':ms:ms-appreciation-timer'
+
+include 'service'
+include ':service:service-account'
+include ':service:service-user'
+include ':service:service-appreciation'
+
+include ':common'
+include ':common:common-exception'
+include ':common:common-plaindata'
+include ':common:common-message'
+include ':common:common-file'
+
+// , ':common:common-file', ':common:common-search'
+
+
+
+// include ':common'
+// include ':common:common-distributedid'
+
+
+// include ':api'
+// include ':api:api-user'
+
+// include ':microservice'
+// include ':microservice:microservice-user'
+// include ':microservice:microservice-user:microservice-user-data'
+// include ':microservice:microservice-user:microservice-user-rpcservice'
+// include ':microservice:microservice-user:microservice-user-server'
+
+
+// project(':microservice').projectDir = new File(settingsDir, './microservice')
+// project(':microservice-user').projectDir = new File(settingsDir, './microservice/microservice-user')
+// project(':microservice-user-repository').projectDir = new File(settingsDir, './microservice/microservice-user/microservice-user-repository')
+// project(':microservice-user-rpcservice').projectDir = new File(settingsDir, './microservice/microservice-user/microservice-user-rpcservice')
+// project(':microservice-user-server').projectDir = new File(settingsDir, './microservice/microservice-user/microservice-user-server')
+

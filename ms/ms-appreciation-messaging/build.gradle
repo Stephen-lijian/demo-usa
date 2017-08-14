@@ -1,0 +1,53 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.4.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("io.spring.gradle:dependency-management-plugin:1.0.0.RC2")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: "io.spring.dependency-management"
+
+version = '1.0'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+	maven {
+		url 'http://repo.spring.io/release/'
+	}
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'com.amazonaws:aws-java-sdk-bom:1.10.77'
+        mavenBom 'org.springframework.cloud:spring-cloud-aws:1.2.1.RELEASE'
+    }
+}
+
+
+dependencies {
+	compile project(':common:common-plaindata')
+	compile project(':common:common-message')
+	compile project(':common:common-exception')
+	compile project(':service:service-appreciation')
+	
+	
+	compile('org.springframework.cloud:spring-cloud-aws-messaging')	
+	compile('org.springframework.cloud:spring-cloud-starter-aws')
+	
+	compileOnly('org.projectlombok:lombok')
+	compile("com.h2database:h2")
+	compile("org.apache.commons:commons-lang3:3.6")
+	compile('org.springframework.boot:spring-boot-starter')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
